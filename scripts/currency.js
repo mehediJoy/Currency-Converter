@@ -6,12 +6,17 @@ usd.addEventListener("input", changeValusd);
 euro.addEventListener("input", changeValeuro);
 bdt.addEventListener("input", changeValbdt);
 
+function nullVal() {
+    usd.value = "";
+    euro.value = "";
+    bdt.value = "";
+}
+
 function changeValusd() {
   var usdVal = usd.value;
 
   if (usdVal === "") {
-    euro.value = "";
-    bdt.value = "";
+    nullVal();
     return;
   }
 
@@ -25,8 +30,7 @@ function changeValeuro() {
   var euroVal = euro.value;
 
   if (euroVal === "") {
-    usd.value = "";
-    bdt.value= "";
+    nullVal();
     return;
   }
 
@@ -40,8 +44,7 @@ function changeValbdt() {
   var bdtVal = bdt.value;
 
   if(bdtVal === "") {
-    usd.value = "";
-    euro.value = "";
+    nullVal();
     return;
   }
 
